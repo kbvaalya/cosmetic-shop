@@ -1,0 +1,42 @@
+.create-preview {
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--blush);
+  background: var(--ivory);
+  text-align: center;
+}
+
+.create-preview__img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.form-required {
+  color: var(--rose);
+  margin-left: 2px;
+}
+
+.form-optional {
+  color: var(--blush);
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 4px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.create-admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
