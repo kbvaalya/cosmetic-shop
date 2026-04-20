@@ -1,0 +1,149 @@
+/* 404 Page */
+.nf-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nf-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.nf-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.22;
+}
+
+.nf-blob--1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, var(--blush), transparent);
+  top: -100px; left: -100px;
+  animation: floatA 14s ease-in-out infinite;
+}
+
+.nf-blob--2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--gold-light), transparent);
+  bottom: -80px; right: -80px;
+  animation: floatB 11s ease-in-out infinite;
+}
+
+@keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+@keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(18px)} }
+
+.nf-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 520px;
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: translateY(0) } }
+
+.nf-code {
+  font-family: var(--ff-display, 'Cormorant Garamond', serif);
+  font-size: clamp(100px, 20vw, 160px);
+  font-weight: 300;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--blush);
+  letter-spacing: -4px;
+  margin-bottom: 0;
+}
+
+.nf-ornament {
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin: 8px 0 20px;
+}
+
+.nf-title {
+  font-family: var(--ff-display, serif);
+  font-size: clamp(26px, 5vw, 38px);
+  font-weight: 400;
+  color: var(--deep);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.nf-title em { font-style: italic; color: var(--rose); }
+
+.nf-desc {
+  font-size: 15px;
+  color: var(--mauve);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.nf-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.nf-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nf-btn--primary {
+  background: var(--deep);
+  color: var(--gold-light);
+  border: none;
+}
+
+.nf-btn--primary:hover {
+  background: var(--charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.nf-btn--ghost {
+  border: 1px solid var(--blush);
+  color: var(--mauve);
+  background: transparent;
+}
+
+.nf-btn--ghost:hover {
+  border-color: var(--rose);
+  color: var(--deep);
+  background: rgba(232, 196, 176, 0.1);
+}
+
+.nf-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: var(--blush);
+}
+
+.nf-links a {
+  color: var(--mauve);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nf-links a:hover { color: var(--rose); }
